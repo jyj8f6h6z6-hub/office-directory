@@ -1,0 +1,5 @@
+# 明文資料與密碼絕對不要推上 GitHub
+data-source/
+.env
+node_modules/
+.DS_Store

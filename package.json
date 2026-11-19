@@ -1,0 +1,10 @@
+{
+  "name": "office-directory",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "水利處電話簿（加密靜態網頁）",
+  "scripts": {
+    "build": "node tools/build.mjs"
+  }
+}

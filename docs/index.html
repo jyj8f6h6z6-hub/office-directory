@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>水利處電話簿</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- 密碼頁 -->
+<div id="gate" class="gate">
+  <form id="gateForm" class="gate-card" autocomplete="off">
+    <div class="gate-icon" aria-hidden="true">☎</div>
+    <h1>水利處電話簿</h1>
+    <p class="muted">本資料僅供內部使用，請輸入密碼</p>
+    <input id="pw" type="password" placeholder="密碼" autocomplete="current-password" required autofocus>
+    <button id="gateBtn" type="submit">進入</button>
+    <p id="gateErr" class="err" role="alert"></p>
+  </form>
+</div>
+
+<!-- 主畫面 -->
+<div id="app" hidden>
+  <header class="top">
+    <div class="top-row">
+      <h1 class="title">水利處電話簿</h1>
+      <nav class="tabs" role="tablist">
+        <button class="tab active" data-tab="internal" role="tab">府內分機</button>
+        <button class="tab" data-tab="external" role="tab">府外電話</button>
+      </nav>
+      <div class="search">
+        <input id="q" type="search" placeholder="搜尋姓名、職稱、單位、分機…" autocomplete="off">
+      </div>
+      <button id="logout" class="ghost" title="登出">登出</button>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="side" id="side" aria-label="單位"></aside>
+    <main class="main">
+      <select id="unitSelect" class="unit-select" aria-label="選擇單位"></select>
+      <div id="status" class="status"></div>
+      <div id="list"></div>
+      <footer class="foot">資料更新日期：<span id="updated"></span>　·　點分機可查詢共用同一分機的人員</footer>
+    </main>
+  </div>
+</div>
+
+<div id="toast" class="toast" role="status"></div>
+
+<script src="data.enc.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
